@@ -22,3 +22,8 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+JAVA_HOME=/usr/java/jdk1.6.0_37
+CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:
+PATH=$PATH:$JAVA_HOME/bin
+export JAVA_HOME CLASSPATH PATH

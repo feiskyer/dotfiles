@@ -217,7 +217,7 @@ set report=0                " : commands always print changed line count.
 set shortmess+=a            " Use [+]/[RO]/[w] for modified/readonly/written.
 set ruler                   " Show some info, even without statuslines.
 set laststatus=2            " Always show statusline, even if only 1 window.
-set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
+" set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
 
 " displays tabs with :set list & displays when a line runs off-screen
 " set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
@@ -306,3 +306,33 @@ if filereadable($VIRTUAL_ENV . '/.vimrc')
 endif
 
 set colorcolumn=79
+
+" ctags settings
+set tags=tags;
+set autochdir
+let Tlist_File_Fold_Auto_Close=1
+nnoremap <silent> <F8> :TlistToggle<CR>
+set backspace=indent,eol,start
+let Tlist_Use_Right_Window=1
+let Tlist_Auto_Update=1
+let Tlist_Exit_OnlyWindow = 1
+
+
+colorscheme desert
+
+if has("cscope")
+  set csprg=/usr/bin/cscope
+  set csto=1
+  set cst 
+  set nocsverb
+  " add any database in current directory
+  if filereadable("cscope.out")
+     cs add cscope.out
+  endif
+  set csverb
+ endif
+
+set fileencodings=utf-8,gb2312,gbk,gb18030
+set termencoding=utf-8
+set fileformats=unix
+set encoding=utf-8
