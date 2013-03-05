@@ -309,7 +309,7 @@ set colorcolumn=79
 
 " ctags settings
 set tags=tags;
-set autochdir
+" set autochdir
 let Tlist_File_Fold_Auto_Close=1
 nnoremap <silent> <F8> :TlistToggle<CR>
 set backspace=indent,eol,start
