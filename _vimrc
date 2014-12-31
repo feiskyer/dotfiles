@@ -52,6 +52,8 @@
 " ==========================================================
 set nocompatible              " Don't be compatible with vi
 let mapleader=","             " change the leader to be a comma vs slash
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 " Seriously, guys. It's not like :W is bound to anything anyway.
 command! W :w
@@ -180,7 +182,7 @@ set virtualedit=block       " Let cursor move past the last char in <C-v> mode
 set scrolloff=3             " Keep 3 context lines above and below the cursor
 set backspace=2             " Allow backspacing over autoindent, EOL, and BOL
 set showmatch               " Briefly jump to a paren once it's balanced
-set nowrap                  " don't wrap text
+" set nowrap                  " don't wrap text
 set linebreak               " don't wrap textin the middle of a word
 set autoindent              " always set autoindenting on
 set smartindent             " use smart indent if there is no indent file
@@ -336,3 +338,17 @@ set fileencodings=utf-8,gb2312,gbk,gb18030
 set termencoding=utf-8
 set fileformats=unix
 set encoding=utf-8
+
+Bundle 'Valloric/YouCompleteMe'
+
+let mapleader = ","  " 这个leader就映射为逗号“，”
+" 配置默认的ycm_extra_conf.py
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+"按,jd 会跳转到定义
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>   
+"打开vim时不再询问是否加载ycm_extra_conf.py配置
+let g:ycm_confirm_extra_conf=0    
+let g:ycm_collect_identifiers_from_tag_files = 1 "使用ctags生成的tags文件
+
+" Don't forget to run :BundleInstall 
+" cd  .vim/bundle/YouCompleteMe &&  ./install.sh --clang-completer
