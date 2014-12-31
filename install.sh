@@ -25,6 +25,10 @@ if [ "$1" = "vim" ]; then
     do
        link_file $i
     done
+elif [ "$1" = "zsh" ]; then
+    cat /etc/issue | grep Ubuntu && sudo apt-get install zsh || sudo yum -y install zsh
+    chsh -s /bin/zsh
+    wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
 elif [ "$1" = "restore" ]; then
     for i in _*
     do
