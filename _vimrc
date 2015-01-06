@@ -339,6 +339,13 @@ set termencoding=utf-8
 set fileformats=unix
 set encoding=utf-8
 
+" CommantT needs vim ruby support
+" sudo apt-get install vim-nox
+" sudo apt-get install ruby1.9.1-dev
+" cd ~/.vim/bundle/command-t/ruby/command-t
+" ruby extconf.rb && make
+Bundle "git://git.wincent.com/command-t.git"
+
 Bundle 'Valloric/YouCompleteMe'
 
 let mapleader = ","  " 这个leader就映射为逗号“，”
