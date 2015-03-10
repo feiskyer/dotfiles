@@ -37,8 +37,8 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/usr/share/awesome/themes/default/theme.lua")
--- beautiful.init("/home/fei/.config/awesome/themes/bamboo/theme.lua")
+-- beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+beautiful.init("~/.config/awesome/themes/bamboo/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
@@ -401,7 +401,7 @@ end
 apptags = 
 {
     ["gnome-terminal"] = {screen=1, tag=1},
-    ["chromium-browser"] = {screen=1, tag=2},
+    ["chromium-browser"] = {screen=2, tag=1},
     -- ["firefox"] = {screen=1, tag=3},
 }
 

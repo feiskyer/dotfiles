@@ -32,6 +32,7 @@ elif [ "$1" = "zsh" ]; then
     sudo apt-get install -y awesome awesome-extra
     mkdir -p ~/.config/awesome
     ln -sf ${PWD}/_rc.lua ~/.config/awesome/rc.lua
+    # git clone git://github.com/mikar/awesome-themes.git ~/.config/awesome/themes
     sudo apt-get install -y chromium-browser
 elif [ "$1" = "term" ]; then
     sudo apt-get -y install terminator
