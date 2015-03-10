@@ -1,10 +1,10 @@
 [user]
-    name = feisky
-    email = feiskyer@gmail.com
+	name = 
+	email = 
 
 [color]
     diff = auto
-    status = auto
+	status = auto
     branch = auto
     ui = auto
 

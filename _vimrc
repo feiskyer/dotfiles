@@ -310,7 +310,10 @@ endif
 set colorcolumn=79
 
 " ctags settings
+map <F5> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> :TlistUpdate<CR>
+imap <F5> <ESC>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> :TlistUpdate<CR>
 set tags=tags;
+set tags+=./tags
 " set autochdir
 let Tlist_File_Fold_Auto_Close=1
 nnoremap <silent> <F8> :TlistToggle<CR>
@@ -333,6 +336,8 @@ if has("cscope")
   endif
   set csverb
  endif
+map <F4> :cs add ./cscope.out .<CR><CR><CR> :cs reset<CR>
+imap <F4> <ESC>:cs add ./cscope.out .<CR><CR><CR> :cs reset<CR>
 
 set fileencodings=utf-8,gb2312,gbk,gb18030
 set termencoding=utf-8

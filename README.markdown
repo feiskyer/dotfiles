@@ -25,7 +25,7 @@ becomes
 ### Installing source files
 It's as simple as running:
 
-    ./install.sh
+    ./install.sh zsh
 
 From this top-level directory.
 
@@ -50,5 +50,5 @@ Note that if there was not an original version, the installed links will not be 
   * pep8
   * pyflakes
   * rope
-* ruby
+  * ruby
   * rake

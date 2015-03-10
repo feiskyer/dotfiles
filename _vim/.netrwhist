@@ -1,11 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/usr/share/doc/libstdc++6'
-let g:netrw_dirhist_2='/usr/share/doc/gcc'
-let g:netrw_dirhist_3='/home/result.txt'
-let g:netrw_dirhist_4='/root/.mutt'
-let g:netrw_dirhist_5='/usr/src/linux-source-3.2.0/linux-source-3.2.0'
-let g:netrw_dirhist_6='/root/.newsbeuter'
-let g:netrw_dirhist_7='/root/dotfiles/_vim'
-let g:netrw_dirhist_8='/usr/src/script/kernel/hello_hook'
-let g:netrw_dirhist_9='/home/fei/dotfiles/_vim/_vim'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/fei/jekyll-bootstrap/pages'
+let g:netrw_dirhist_2='/home/fei/jekyll-bootstrap/pages/links'
+let g:netrw_dirhist_3='/home/fei/powervc-driver/neutron-powervc/bin'
