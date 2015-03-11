@@ -378,8 +378,6 @@ client.add_signal("focus", function(c) c.border_color = beautiful.border_focus e
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
--- exec("gnome-keyring-daemon --daemonize --login")
--- exec("gnome-session --session=ubuntu")
 -- size_hints_honor = false
 
 -- Autorun programs
@@ -409,4 +407,8 @@ tags[1][1].selected = true
 tags[1][1].name = "Terminal"
 tags[1][2].name = "chrome"
 -- tags[s][3].name = "firefox"
+
+-- exec ("gnome-settings-daemon")
+-- exec("gnome-keyring-daemon --daemonize --login")
+-- exec("gnome-session --session=ubuntu")
 

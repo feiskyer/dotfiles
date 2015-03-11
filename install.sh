@@ -29,7 +29,8 @@ elif [ "$1" = "zsh" ]; then
     cat /etc/issue | grep Ubuntu && sudo apt-get install zsh || sudo yum -y install zsh
     chsh -s /bin/zsh
     wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
-    sudo apt-get install -y awesome awesome-extra
+    sudo apt-get install -y awesome awesome-extra gnome-settings-daemon nautilus
+    sudo apt-get install -y --no-install-recommends gnome-session
     mkdir -p ~/.config/awesome
     ln -sf ${PWD}/_rc.lua ~/.config/awesome/rc.lua
     # git clone git://github.com/mikar/awesome-themes.git ~/.config/awesome/themes
