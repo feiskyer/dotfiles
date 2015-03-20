@@ -1,5 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/fei/jekyll-bootstrap/pages'
-let g:netrw_dirhist_2='/home/fei/jekyll-bootstrap/pages/links'
-let g:netrw_dirhist_3='/home/fei/powervc-driver/neutron-powervc/bin'
+let g:netrw_dirhist_cnt =5

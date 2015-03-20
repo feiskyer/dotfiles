@@ -399,13 +399,13 @@ end
 apptags = 
 {
     ["gnome-terminal"] = {screen=1, tag=1},
-    ["chromium-browser"] = {screen=1, tag=2},
+    ["firefox"] = {screen=1, tag=2},
     -- ["firefox"] = {screen=1, tag=3},
 }
 
 tags[1][1].selected = true
 tags[1][1].name = "Terminal"
-tags[1][2].name = "chrome"
+tags[1][2].name = "Browser"
 -- tags[s][3].name = "firefox"
 
 -- exec ("gnome-settings-daemon")
