@@ -52,8 +52,14 @@
 " ==========================================================
 set nocompatible              " Don't be compatible with vi
 let mapleader=","             " change the leader to be a comma vs slash
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+filetype off                  " required
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'Valloric/YouCompleteMe'
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " Seriously, guys. It's not like :W is bound to anything anyway.
 command! W :w
@@ -344,15 +350,6 @@ set termencoding=utf-8
 set fileformats=unix
 set encoding=utf-8
 
-" CommantT needs vim ruby support
-" sudo apt-get install vim-nox
-" sudo apt-get install ruby1.9.1-dev
-" cd ~/.vim/bundle/command-t/ruby/command-t
-" ruby extconf.rb && make
-Bundle "git://git.wincent.com/command-t.git"
-
-Bundle 'Valloric/YouCompleteMe'
-
 let mapleader = ","  " 这个leader就映射为逗号“，”
 " 配置默认的ycm_extra_conf.py
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
@@ -364,3 +361,9 @@ let g:ycm_collect_identifiers_from_tag_files = 1 "使用ctags生成的tags文件
 
 " Don't forget to run :BundleInstall 
 " cd  .vim/bundle/YouCompleteMe &&  ./install.sh --clang-completer
+"
+" CommantT needs vim ruby support
+" sudo apt-get install vim-nox
+" sudo apt-get install ruby1.9.1-dev
+" cd ~/.vim/bundle/command-t/ruby/command-t
+" ruby extconf.rb && make

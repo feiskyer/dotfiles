@@ -25,6 +25,17 @@ if [ "$1" = "vim" ]; then
     do
        link_file $i
     done
+    # upgrade vim to latest version
+    # sudo apt-get install python-software-properties 
+    # sudo apt-add-repository -y ppa:blueyed/ppa
+    sudo apt-get install -y rake vim git vim-nox ruby1.9.1-dev
+    # fetch vundle and install plugins
+    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    vim +PluginInstall +qall 
+    # setup command-t
+    cd _vim/bundle/command-t && rake make
+    # setup youcompleteme
+    cd  .vim/bundle/YouCompleteMe &&  ./install.sh --clang-completer
 elif [ "$1" = "zsh" ]; then
     cat /etc/issue | grep Ubuntu && sudo apt-get install zsh || sudo yum -y install zsh
     chsh -s /bin/zsh
@@ -56,6 +67,3 @@ fi
 git submodule update --init --recursive
 git submodule foreach --recursive git pull origin master
 
-setup command-t
-cd _vim/bundle/command-t
-rake make
