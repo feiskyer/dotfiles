@@ -28,7 +28,7 @@ if [ "$1" = "vim" ]; then
     # upgrade vim to latest version
     # sudo apt-get install python-software-properties 
     # sudo apt-add-repository -y ppa:blueyed/ppa
-    sudo apt-get install -y rake vim git vim-nox ruby1.9.1-dev
+    cat /etc/issue | grep Ubuntu && sudo apt-get install -y rake vim git vim-nox ruby1.9.1-dev || sudo yum install -y vim git vim-nox ruby-devel
     # fetch vundle and install plugins
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     vim +PluginInstall +qall 
@@ -40,12 +40,12 @@ elif [ "$1" = "zsh" ]; then
     cat /etc/issue | grep Ubuntu && sudo apt-get install zsh || sudo yum -y install zsh
     chsh -s /bin/zsh
     wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
-    sudo apt-get install -y awesome awesome-extra gnome-settings-daemon nautilus
-    sudo apt-get install -y --no-install-recommends gnome-session
-    mkdir -p ~/.config/awesome
-    ln -sf ${PWD}/_rc.lua ~/.config/awesome/rc.lua
+    # sudo apt-get install -y awesome awesome-extra gnome-settings-daemon nautilus
+    # sudo apt-get install -y --no-install-recommends gnome-session
+    # mkdir -p ~/.config/awesome
+    # ln -sf ${PWD}/_rc.lua ~/.config/awesome/rc.lua
     # git clone git://github.com/mikar/awesome-themes.git ~/.config/awesome/themes
-    sudo apt-get install -y chromium-browser
+    # sudo apt-get install -y chromium-browser
 elif [ "$1" = "term" ]; then
     sudo apt-get -y install terminator
     mkdir -p ~/.config/terminator/
@@ -64,6 +64,6 @@ else
     done
 fi
 
-git submodule update --init --recursive
-git submodule foreach --recursive git pull origin master
+# git submodule update --init --recursive
+# git submodule foreach --recursive git pull origin master
 
