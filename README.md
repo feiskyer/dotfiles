@@ -9,6 +9,20 @@ sudo add-apt-repository ppa:jonathonf/vim && sudo apt-get update && sudo apt-get
 # setup vim-go
 git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
 vim +:GoInstallBinaries
+
+git clone https://github.com/Valloric/YouCompleteMe ~/.vim/bundle/YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe
+git submodule update --init --recursive
+sudo apt-get install build-essential cmake python-dev python3-dev -y
+./install.py --clang-completer --go-completer
+```
+
+git related steps:
+
+```
+git config --global core.editor vim
+git config --global user.name "Your Name"
+git config --global user.email "Your email"
 ```
 
 ## Files
