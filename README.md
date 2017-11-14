@@ -1,4 +1,18 @@
+# dotfiles
+
+Vim related steps:
+
+```sh
+# install vim 8.0
+sudo add-apt-repository ppa:jonathonf/vim && sudo apt-get update && sudo apt-get install vim -y
+
+# setup vim-go
+git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
+vim +:GoInstallBinaries
+```
+
 ## Files
+
 .vim
     directory of file type configurations and plugins
 .vimrc
