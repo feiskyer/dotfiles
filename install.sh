@@ -28,14 +28,14 @@ if [ "$1" = "vim" ]; then
     # upgrade vim to latest version
     # sudo apt-get install python-software-properties 
     # sudo apt-add-repository -y ppa:blueyed/ppa
-    cat /etc/issue | grep Ubuntu && sudo apt-get install -y rake vim git vim-nox ruby1.9.1-dev || sudo yum install -y vim git vim-nox ruby-devel
+    cat /etc/issue | grep Ubuntu && sudo apt-get install -y rake vim git vim-nox ruby-dev || sudo yum install -y vim git vim-nox ruby-devel
     # fetch vundle and install plugins
-    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     vim +PluginInstall +qall 
     # setup command-t
-    cd _vim/bundle/command-t && rake make
+    cd .vim/bundle/command-t && rake make
     # setup youcompleteme
-    cd  .vim/bundle/YouCompleteMe &&  ./install.sh --clang-completer
+    cd  .vim/bundle/YouCompleteMe &&  ./install.sh --clang-completer --go-completer
 elif [ "$1" = "zsh" ]; then
     cat /etc/issue | grep Ubuntu && sudo apt-get install zsh || sudo yum -y install zsh
     chsh -s /bin/zsh
